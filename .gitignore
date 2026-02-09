@@ -1,0 +1,14 @@
+# Ignore images
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Ignore Salesforce local files
+.sf/
+.sfdx/
+.local/
+
+# Ignore OS files
+.DS_Store
+
