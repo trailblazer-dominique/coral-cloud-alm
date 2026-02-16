@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <customProperties>
+        <name>ScreenProgressIndicator</name>
+        <value>
+            <stringValue>{&quot;location&quot;:&quot;top&quot;,&quot;type&quot;:&quot;simple&quot;}</stringValue>
+        </value>
+    </customProperties>
+    <environments>Default</environments>
+    <interviewLabel>Demo Flow: Update Credit {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Demo Flow: Update Credit</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Update_Credit</name>
+        <label>Update Credit</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>Issue_Record_Credit_Flow</targetReference>
+        </connector>
+        <fields>
+            <name>Credit_Update</name>
+            <fieldText>&lt;p&gt;Your resort credit is being updated&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Credit</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Issue_Record_Credit_Flow</name>
+        <label>Issue Record Credit Flow</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <flowName>Issue_Record_Credit</flowName>
+    </subflows>
+</Flow>
