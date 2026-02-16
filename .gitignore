@@ -12,3 +12,7 @@
 # Ignore OS files
 .DS_Store
 
+**/genAiFunctions/**
+**/genAiPlugins/**
+**/Issue_Record_Credit/**
+**/Customer_Service/**
